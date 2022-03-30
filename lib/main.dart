@@ -1,40 +1,51 @@
 import 'package:flutter/material.dart';
+import './fancybutton.dart';
+import './studentButton.dart';
 
 void main() {
   runApp(MyApp());
 }
-class MyApp extends StatelessWidget{ 
-   Widget build(BuildContext context) {
-    return MaterialApp(
-    
-      theme: ThemeData(
-       appBarTheme: AppBarTheme(
-       color: const Color(0xFF151026),
-    )),
-    home:Scaffold(
-    
-      appBar:AppBar(
-        title:Text('Autodice education'),
-      ),
-    body:Column(
-      
-      children: [
+void _LoginTeacher(){
+print("jello");
 
-        RaisedButton(child: Text("Teacher Login"),onPressed:null ),
-        RaisedButton(child: Text("Student Login"),onPressed:null),
-    
-      ],
-    ),
-    
-     
-    
-    
-    ),
-    );
-    // return MaterialApp(home:Text('Hello World'),);
-  }
 }
 
+void _LoginStudent(){
+print("Hello");
+
+}
+
+class MyApp extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+home: Scaffold(
+  backgroundColor: Colors.amber,
+  appBar: AppBar(backgroundColor:Colors.black ,
+  title:Text('Autodice'),
+  ),
+  body: Column(children: [
+  FancyButton(_LoginTeacher),
+  studentButton(_LoginStudent),
+
+   
+   
+   
+  ]
   
+  
+  ),
+  )
 
 
+
+
+
+
+
+
+
+
+
+    );
+  }
+}
