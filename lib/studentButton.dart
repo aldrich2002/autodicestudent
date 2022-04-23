@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Teacherlogin.dart';
+import 'StudentLogin.dart';
 
 class studentButton extends StatelessWidget {
   final VoidCallback eventsHandlerstudent;
@@ -17,7 +18,7 @@ class studentButton extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Teacherlogin()),
+              MaterialPageRoute(builder: (context) => StudentLogin()),
             );
           },
           shape:

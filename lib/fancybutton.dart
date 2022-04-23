@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'Teacherlogin.dart';
 
 class FancyButton extends StatelessWidget {
   final VoidCallback eventsHandler;
@@ -12,7 +13,12 @@ class FancyButton extends StatelessWidget {
       height: 50.0,
       margin: EdgeInsets.only(top:10),
       child: RaisedButton(
-        onPressed: eventsHandler,
+        onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Teacherlogin()),
+            );
+          },
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
         padding: EdgeInsets.all(0.0),
