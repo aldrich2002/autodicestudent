@@ -1,17 +1,24 @@
 import 'package:autodice/adminButton.dart';
+import 'package:autodice/adminPage.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import './fancybutton.dart';
 import './studentButton.dart';
 import './Teacherlogin.dart';
+import 'package:flutter/rendering.dart';
+void main()  async{
 
-void main() {
+debugPaintSizeEnabled = true;
+WidgetsFlutterBinding.ensureInitialized();
+await Firebase.initializeApp();
+
+  setup();
   runApp(MyApp());
 }
 
 void _printw() {
   print("Hello");
 }
-
 class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -25,7 +25,7 @@ class adminButton extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => adminPage()),
+              MaterialPageRoute(builder: (context) => MyApp()),
             );
 
 
